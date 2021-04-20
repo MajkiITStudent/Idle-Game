@@ -14,6 +14,12 @@ class Currency():
     def __init__(self, val=0, type='gold'):
         self.val = Decimal(val)
         self.type = type
+        
+    def getValue(self):
+        return self.val
+    
+    def getType(self):
+        return self.type
 
     def __mul__(self, other):
         if isinstance(other, Currency):
